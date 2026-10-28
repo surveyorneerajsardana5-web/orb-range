@@ -1,0 +1,23 @@
+{
+  "name": "ajs-trading-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AJS Trading Pro web dashboard with Upstox market data and paper trading",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js && node --check real-trading-safety.js",
+    "test:safety": "node --test tests/*.test.js",
+    "test:guards": "node --test tests/guards.test.js",
+    "test:all": "npm run check && npm run test:safety && npm run test:guards"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ws": "^8.18.0",
+    "protobufjs": "^7.4.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mode": "real",
+  "entryTrigger": "B1",
+  "lots": 1,
+  "maxDailyLossINR": 3200,
+  "requireStopLoss": true,
+  "requireTarget": true,
+  "requireTrailingStop": true,
+  "autoExecutionEnabled": false
+}

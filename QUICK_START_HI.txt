@@ -1,0 +1,20 @@
+AJS TRADING PRO - TESTED BUILD
+
+Windows 11:
+1. ZIP ko extract karein.
+2. Folder mein Command Prompt kholein.
+3. Run: npm install
+4. Run all local checks: npm run test:all
+5. Start app: npm start
+6. Browser: http://localhost:3000 (PORT .env mein alag ho sakta hai)
+
+Test coverage:
+- JavaScript syntax checks
+- Safety unit tests (daily loss cap, invalid risk data, trailing stop, B1 duplicate guard)
+- Static fail-closed checks for live-order gates and read-only preflight
+
+IMPORTANT:
+All local automated tests passing does NOT mean live broker trading has been validated.
+Upstox credentials, live market feed, broker fills, stop-loss/target/trailing protection,
+restart recovery and emergency exit must be tested separately. Real orders remain disabled.
+Do not put API tokens into source code or share .env files. If a token was exposed, revoke it.
